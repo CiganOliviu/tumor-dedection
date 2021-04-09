@@ -37,7 +37,8 @@ history = model.fit(x_train, y_train,
                     batch_size=batch_size,
                     validation_data= (x_test, y_test),
                     callbacks=[checkpointer],
-                    verbose=2
+                    shuffle=True,
+                    verbose=1
                     )
 
 model_json = model.to_json()
